@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>BanjirMap Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-image: url('https://lh5.googleusercontent.com/-wsvnzEocxiI/T6uJI7SUw6I/AAAAAAAAAaY/gARUNd1gTGo/s989/Provinces+of+Indonesia.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      min-height: 80vh;
+    }
+    .overlay {
+      background-color: rgba(245, 243, 243, 0.85);
+      padding: 30px;
+      border-radius: 12px;
+    }
+    .hero-img {
+      width: 150px;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cek apakah user sudah login -->
+  <script>
+    if (!localStorage.getItem("isLoggedIn")) {
+      window.location.href = "login.html";
+    }
+  </script>
+
+  <!-- Navigasi -->
+  <nav class="navbar navbar-light bg-white border-bottom px-4">
+    <span class="navbar-brand mb-0 h5 text-primary d-flex align-items-center">
+      <img src="logo_banjirmap-removebg-preview.png" alt="Logo" class="me-2" style="height: 30px;">
+      BanjirMap
+    </span>
+    <div>
+      <a href="index.html" class="me-3">Home</a>
+      <a href="data.html" class="me-3">Data</a>
+      <a href="add.html" class="me-3">Add</a>
+      <a href="evakuasi.html" class="me-3">Jalur evakuasi</a>
+      <a href="add_evakuasi.html" class="me-3">add Evakuasi</a>
+      <a href="logut.html" class="btn btn-primary btn-sm">Logout</a>
+    </div>
+  </nav>
+
+  <!-- Konten utama -->
+  <div class="container d-flex justify-content-center align-items-center mt-5">
+    <div class="text-center overlay">
+      <h2 class="text-primary">Selamat Datang di BanjirMap</h2>
+      <p class="mb-4">Aplikasi Monitoring dan Penanganan Evakuasi Lokasi Banjir</p>
+
+      <img src="logo_banjirmap-removebg-preview.png" 
+           alt="Logo BanjirMap" 
+           class="hero-img shadow rounded mb-4">
+
+      <div>
+        <a href="map.html" class="btn btn-success btn-lg me-2">Lihat Peta Banjir</a>
+        <a href="data.html" class="btn btn-outline-primary btn-lg">Lihat Data Lokasi</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
